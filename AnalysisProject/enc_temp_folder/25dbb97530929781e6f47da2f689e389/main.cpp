@@ -11,7 +11,7 @@ using namespace std;
 
 void inline insertion_sort(vector< int > &B) //Insertion sort
 {
-	for ( int j = 1; j < B.size(); j++)
+	for (int j = 1; j < B.size(); j++)
 	{
 		int key = B[j];
 		int i = j - 1;
