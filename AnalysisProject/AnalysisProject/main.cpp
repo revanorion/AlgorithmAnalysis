@@ -8,7 +8,7 @@ using namespace std;
 #define n_f 20000 
 #define n_s 1000
 #define delta 1000 
-
+//Part of insertion sort
 void inline insertion_sort(vector< int > &B) //Insertion sort
 {
 	for ( int j = 1; j < B.size(); j++)
@@ -24,7 +24,7 @@ void inline insertion_sort(vector< int > &B) //Insertion sort
 		B[i + 1] = key;
 	}
 }
-
+//part of merge sort
 void merge(vector<int> &B, int p, int q, int r)
 {
 	int n_1 = q - p + 1;
@@ -57,7 +57,7 @@ void merge(vector<int> &B, int p, int q, int r)
 		}
 }
 
-
+//part of merge sort
 void merge_sort(vector<int> &B, int p, int r)
 {
 	if (p<r)
@@ -69,7 +69,7 @@ void merge_sort(vector<int> &B, int p, int r)
 	}
 }
 
-
+//part of quicksort
 int partition(vector<int> &B, int p, int r)
 {
 	int x = B[r];
@@ -91,7 +91,7 @@ int partition(vector<int> &B, int p, int r)
 	B[i + 1] = temp;
 	return i + 1;
 }
-
+//part of quicksort
 void quicksort(vector<int> &B, int p, int r)
 {
 	if (p<r)
@@ -112,7 +112,7 @@ ostream & operator<<(ostream &out, vector<T> org)
 }
 
 
-
+//Part of insertion sort & merge sort
 double average(vector<double> time, int elements)
 {
 	double avg = 0;
@@ -120,7 +120,7 @@ double average(vector<double> time, int elements)
 		avg += time[i];
 	return avg /= elements;
 }
-
+//Part of insertion sort
 void insertCalc(vector<vector<int>>&A)
 {
 	vector <double> t_avg1;
@@ -142,6 +142,7 @@ void insertCalc(vector<vector<int>>&A)
 	cout << "insertion sort time:\n" << t_avg1 << endl;
 
 }
+//Part of merge sort
 void mergeCalc(vector<vector<int>>&A)
 {
 	vector <double> t_avg2;
@@ -161,6 +162,7 @@ void mergeCalc(vector<vector<int>>&A)
 	}
 	cout << "merge sort time:\n" << t_avg2 << endl;
 }
+//part of quick sort
 void quickCalc(vector<vector<int>>&A)
 {
 	vector <double> t_avg3;
